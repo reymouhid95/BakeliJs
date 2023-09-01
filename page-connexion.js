@@ -40,9 +40,9 @@ connexionButton.addEventListener("click", () => {
       alert("User logged in successfully");
       auth.onAuthStateChanged((user) => {
         if (user && email === adminEmail) {
-          window.location.href = "/dashboard.html";
+          window.location.href = "dashboard.html";
         } else {
-          window.location.href = "/UserDashboard.html";
+          window.location.href = "UserDashboard.html";
         }
       });
     })
