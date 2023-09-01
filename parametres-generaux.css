@@ -1,0 +1,740 @@
+/* Parametres Generaux */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: #ededee;
+  font-size: medium;
+}
+
+#parametresGeneraux {
+  background-color: #ededee;
+  font-family: "Montserrat";
+  height: 100%;
+}
+
+#parametresGeneraux #editerProfil,
+#parametresGeneraux .btn {
+  background-color: #093545;
+  color: #fff;
+}
+
+#parametresGeneraux #adminInformations h4 {
+  background-color: #20df7f;
+}
+
+#parametresGeneraux #contentInfo {
+  width: 90%;
+}
+
+#parametresGeneraux #admin img {
+  border: 6px solid #20df7f;
+  width: 45%;
+}
+
+#parametresGeneraux #photo {
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
+}
+
+#parametresGeneraux .content {
+  padding-top: 7%;
+  padding-bottom: 4%;
+}
+
+/* media queries */
+@media screen and (min-width: 560px) and (max-width: 1400px) {
+  #parametresGeneraux #admin {
+    border-right: 3px solid #c8c8c8;
+  }
+
+  #parametresGeneraux #adminInformations {
+    padding: 3%;
+  }
+
+  #parametresGeneraux #contentInfo {
+    padding: 3%;
+    width: 100%;
+  }
+
+  #parametresGeneraux .information {
+    padding: 4%;
+  }
+
+  #parametresGeneraux .information .bttn {
+    display: flex;
+    justify-content: right;
+  }
+
+  #parametresGeneraux .profilAdmin {
+    /* text-align: center; */
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #parametresGeneraux .profilAdmin img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  #parametresGeneraux #admin #photo {
+    z-index: 0;
+  }
+
+  #parametresGeneraux #file {
+    display: none;
+  }
+
+  #parametresGeneraux #admin .name {
+    padding-top: 13%;
+  }
+
+  #parametresGeneraux #uploadButton {
+    position: absolute;
+    height: 30px;
+    padding: 5% 5%;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #20df7f;
+    color: #fff;
+    cursor: pointer;
+    left: 56%;
+    top: 80%;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 559px) {
+  #parametresGeneraux #admin .profil {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 100%;
+  }
+
+  #parametresGeneraux #admin .titleProfil {
+    display: none;
+  }
+
+  #parametresGeneraux #admin #photo {
+    width: 160px;
+    height: 160px;
+    object-fit: fill;
+  }
+
+  #parametresGeneraux #adminInformations {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #parametresGeneraux .content {
+    padding-top: 22%;
+    padding-bottom: 22%;
+  }
+
+  #parametresGeneraux #contentInfo {
+    padding: 0;
+    width: 100%;
+  }
+
+  #parametresGeneraux .information {
+    padding: 4%;
+  }
+
+  #parametresGeneraux #admin {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  /* #parametresGeneraux #admin img {
+        width: 50%;
+        height: 100%;
+    } */
+
+  #parametresGeneraux #admin .name {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  #parametresGeneraux #editerProfil {
+    display: none;
+  }
+
+  #parametresGeneraux .information .bttn {
+    display: flex;
+    justify-content: center;
+  }
+
+  #parametresGeneraux .profilAdmin {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #parametresGeneraux #file {
+    display: none;
+  }
+
+  #parametresGeneraux #uploadButton {
+    position: absolute;
+    height: 30px;
+    padding: 5% 5%;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #20df7f;
+    color: #fff;
+    cursor: pointer;
+    left: 56%;
+    top: 80%;
+  }
+}
+
+@media screen and (min-width: 530px) and (max-width: 770px) {
+  #parametresGeneraux #uploadButton {
+    position: absolute;
+    height: 30px;
+    padding: 6% 7%;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #20df7f;
+    color: #fff;
+    cursor: pointer;
+    left: 63%;
+    top: 82%;
+  }
+
+  #parametresGeneraux .name {
+    padding-top: 8%;
+  }
+
+  #parametresGeneraux .profilAdmin {
+    width: 100%;
+  }
+
+  #parametresGeneraux #admin img {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 259px) {
+  #parametresGeneraux #uploadButton {
+    position: absolute;
+    height: 30px;
+    padding: 4px 7px 5px 7px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #20df7f;
+    color: #fff;
+    cursor: pointer;
+    left: 65%;
+    top: 80%;
+  }
+
+  #parametresGeneraux #admin .profil {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  #parametresGeneraux #photo {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  #parametresGeneraux #admin .titleProfil {
+    display: none;
+  }
+
+  #parametresGeneraux #adminInformations {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #parametresGeneraux #admin {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  #parametresGeneraux #admin img {
+    width: 100%;
+    height: 80%;
+  }
+
+  #parametresGeneraux #admin .name {
+    padding: 10%;
+  }
+
+  #parametresGeneraux #editerProfil {
+    display: none;
+  }
+
+  #parametresGeneraux .information .bttn {
+    display: flex;
+    justify-content: center;
+  }
+
+  #parametresGeneraux .profilAdmin {
+    width: 80%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #parametresGeneraux #file {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1450px) {
+  #parametresGeneraux #admin {
+    border-right: 3px solid #c8c8c8;
+  }
+  #parametresGeneraux #adminInformations {
+    padding: 3%;
+  }
+
+  #parametresGeneraux #contentInfo {
+    padding: 2%;
+    width: 100%;
+  }
+
+  #parametresGeneraux .information {
+    padding-left: 6%;
+    padding-top: 1%;
+  }
+
+  #parametresGeneraux .information .bttn {
+    display: flex;
+    justify-content: right;
+  }
+
+  #parametresGeneraux .profilAdmin {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #parametresGeneraux #file {
+    display: none;
+  }
+
+  #parametresGeneraux #uploadButton {
+    position: absolute;
+    height: 30px;
+    padding: 4px 7px 5px 7px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #20df7f;
+    color: #fff;
+    cursor: pointer;
+    left: 60%;
+    top: 80%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+#navi ul li {
+  padding-left: 1rem;
+}
+a {
+  text-decoration: none;
+}
+
+.sidebar {
+  background-color: #093545;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+.sidebar .bakeli-tontine {
+  font-size: 22px;
+}
+
+.nav-link-items {
+  font-size: 17px;
+}
+.nav-param_link-items {
+  font-size: 15px;
+}
+
+.dropdown .dropdown-menu li:hover {
+  background-color: transparent;
+}
+.dropdown .dropdown-menu li {
+  padding-left: 0.2rem;
+}
+.style-nav-elem {
+  background-color: #20df7f;
+  border-left: 0.2rem solid white;
+  padding-left: 0.8rem;
+}
+
+.dropdown .dropdown-menu {
+  color: white;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#header {
+  width: 83.333%;
+  padding-top: 10px;
+  box-shadow: 0 0 8px 0.7px;
+  background-color: #fff;
+  color: #333;
+  z-index: 10;
+}
+#header div span .bi {
+  font-size: 25px;
+}
+#header .user-name {
+  font-size: 21px;
+}
+#header .user-type {
+  font-size: 15px;
+}
+#header-btn-down {
+  background-color: transparent;
+}
+#header img {
+  width: 55px;
+  height: 55px;
+}
+#header #leBoutonPourSeDeconnecter {
+  outline: none !important;
+}
+/*================D.R.O.P.D.O.W.N==================*/
+
+/*#myModal{
+	position: absolute;
+	display: none;
+	width: 200px;
+	height: auto;
+	margin: 10px;
+	background-color: #093545;
+	z-index: 10;
+	top: 50px;
+	right: 50px;
+	color: #fff;
+}
+#modal_container{
+	position: relative;
+	padding: 20px 10px 10px 10px;
+	margin: 10px;
+	border: 1px solid #fff;
+}
+#myModal #modal_container ul{
+	margin-left: 0px;
+	padding-left: 0;
+}
+#myModal #modal_container ul #modal_deconnexion button{
+	padding-left: 0 !important;
+}
+#myModal #modal_container ul #modal_deconnexion button a{
+	transition: 0.75s ease-in-out !important;
+}
+#myModal #modal_container ul #modal_deconnexion i{
+	font-size: 15px;
+}
+#myModal #modal_container ul #modal_deconnexion button,
+#myModal #modal_container ul #notification_resp button
+{
+	background-color: transparent;
+}
+#myModal #modal_container ul #modal_deconnexion button a:hover{
+	 color: red !important;
+}
+#closeModalBtn{
+	position: absolute;
+	z-index: 9;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 30px;
+}*/
+/*======================================*/
+
+#badge {
+  top: 20%;
+  width: 25px;
+  height: 25px;
+  font-size: 10px;
+  background-color: #20df7f;
+  border: 2px solid white;
+}
+#start .link-animation {
+  transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
+  transition: transform 1s;
+  transition-delay: calc(0.1s * var(--i));
+  background-color: #093545;
+}
+#start.active .link-animation {
+  transform: translate(calc(14px * var(--x)), calc(14px * var(--y)));
+}
+#start.desactive .link-animation {
+  transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
+}
+
+@media screen and (max-width: 1000px) {
+  #navi ul li {
+    padding-left: 0.1rem;
+  }
+  .nav-link-items {
+    font-size: 15px;
+  }
+  .nav-param_link-items {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 823px) {
+  #navi ul li .dropdown-toggle span {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #header-mobile-option,
+  #param-dropu,
+  #notification_resp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 8px 0.7px;
+    background-color: #093545;
+    color: #fff;
+  }
+  #header div div button i {
+    color: #fff;
+  }
+  #header .option-menu, 
+/*	#header .profil-compte .clock, */
+	#header .profil-compte .user-type, 
+	.sidebar .bakeli-tontine,
+	.sidebar #navi #nav-ul li .link-name-hidden, 
+	.sidebar #param-dropdown,
+	#nav-link-items {
+    display: none;
+  }
+  #header .profil-compte .clock {
+    margin-right: 30px !important;
+  }
+  #header .profil-compte .clock i {
+    font-size: 22px !important;
+  }
+  #header .profil-compte {
+    padding-left: 10px;
+    margin: auto;
+    align-items: center;
+  }
+  #header .profil-compte .user-name {
+    vertical-align: center;
+    margin: auto 10px;
+  }
+  #header img {
+    width: 55px;
+    height: 55px;
+  }
+  #header #create-new-container {
+    margin-right: 25px;
+  }
+  #header #myModal {
+    top: 50px;
+    left: 50px;
+  }
+
+  .sidebar {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 0 8px 0.7px #093545;
+    bottom: 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sidebar #navi {
+    width: 100%;
+    padding-top: 0;
+  }
+  .sidebar #navi ul {
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #navi ul li a .bi,
+  #navi ul li .nav-link-items span .bi,
+  #param-dropu #start .link-animation .bi,
+  #param-dropu #start #link-animation-start .bi {
+    font-size: 50px;
+    color: #093545;
+  }
+  #navi ul li a .bi {
+    position: relative;
+  }
+
+  .bi {
+    padding: 0 4px;
+  }
+
+  /* #start.active{
+
+	} */
+}
+
+@media screen and (max-width: 650px) {
+  .nav-link-items {
+    font-size: 13px;
+  }
+
+  #navi ul li a .bi,
+  #navi ul li .nav-link-items span .bi,
+  #param-dropu #start .link-animation .bi,
+  #param-dropu #start #link-animation-start .bi {
+    font-size: 30px;
+    margin: auto;
+  }
+  #navi ul li span .bi {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  #btn-deconnexion {
+    display: none;
+  }
+  #header #power-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .sidebar {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #header .user-name {
+    font-size: 16px;
+  }
+  #header .user-type {
+    font-size: 12px;
+  }
+  .option-menu {
+    font-size: 14px;
+  }
+  /* #param-dropu{
+/*		margin-right: 100px;*/
+}
+
+@media screen and (max-width: 430px) {
+  #navi ul li .nav-link-items span .bi,
+  #param-dropu #start .link-animation .bi,
+  #param-dropu #start #link-animation-start .bi {
+    font-size: 30px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  #header #create-new-container {
+    margin-right: 10px;
+  }
+
+  #create-new-container {
+    display: flex;
+    justify-content: center;
+  }
+  #create-new-container .create-new {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  #header-mobile-option div button {
+    border: none !important;
+  }
+  #header #create-new-container {
+    margin-right: 0px;
+    padding: 0 !important;
+  }
+  #header #create-new-container .create-new {
+    padding: 0 !important;
+  }
+  #header-mobile-option div #power-container #btn-deconnexion {
+    padding: 0 !important;
+  }
+  #header-mobile-option div #power-container {
+    padding: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  #header .profil-compte {
+    padding: 0 0;
+    margin: 0 !important;
+  }
+  #header .profil-compte .clock i {
+    font-size: 18px !important;
+  }
+  #header-mobile-option button i {
+    font-size: 17px !important;
+  }
+  #header #header-user-profil {
+    margin-left: 0 0 !important;
+  }
+  #header #header-user-profil #header-btn-down {
+    margin-left: 2px !important;
+    font-size: 15px;
+  }
+  #header #profil-img {
+    width: 45px !important;
+    height: 45px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #header .user-name {
+    font-size: 15px !important;
+  }
+}

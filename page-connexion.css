@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+.bg {
+  background-color: #093545 !important;
+}
+
+.bg .placeholder {
+  color: white !important;
+}
+
+.titre {
+  color: #093545 !important;
+}
+
+.titre h1 {
+  font-size: 60px;
+}
+
+.gérer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contenu {
+  background: #093545;
+  height: 100vh;
+  border-radius: 0 20% 20% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 990px) {
+  .giss {
+    display: none;
+  }
+  .footer-img {
+    display: block !important;
+  }
+  .footer-img img {
+    margin-top: 20vh !important;
+  }
+  .titre h1 {
+    display: none;
+  }
+  .titre img {
+    margin-bottom: 100px;
+    margin-left: 50px;
+  }
+  .titre h2 {
+    margin-bottom: 70px;
+    font-size: 40px;
+  }
+  .titre img {
+    display: block !important;
+  }
+}
+
+@media (max-width: 990px) {
+  .fewnu {
+    display: none;
+  }
+}
+
+::placeholder {
+  color: white !important;
+}
+
+.para {
+  color: #224957 !important;
+  font-weight: bold !important;
+  width: 100%;
+  background: #20df7f !important;
+  border: none !important;
+  text-align: center;
+  animation: SlideRight 3s;
+}
+
+.para:hover {
+  background-color: #224957 !important;
+  color: white !important;
+  transition: 2s;
+}
+
+.ra {
+  background: #20df7f !important;
+  border: none !important;
+  color: #224957 !important;
+}
+.footer-img {
+  display: none;
+}
+.titre img {
+  display: none;
+}
+
+input {
+  animation: SlideLeft 3s;
+}
+
+@keyframes SlideLeft {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideRight {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

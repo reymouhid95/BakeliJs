@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive</title>
+    <!-- ========== Link Bootstrap ========= -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- ========== Bootstrap Icons Link ======== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- ========== Link CDN ======= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="archive-bloquer.css">
+</head>
+<style>
+    .header {
+        background: #EDEDEE;
+        margin-top: 75px;
+        padding: 25px;
+    }
+
+    .header h1 {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .container h3 {
+        margin-left: 30%;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .table {
+        width: 469px;
+        margin: 20px auto;
+        background: #FFF;
+        flex-shrink: 0;
+    }
+
+    .table th {
+        padding-left: 4%;
+        background: #20DF7F;
+    }
+
+    .table tr td {
+        padding-left: 4%;
+        color: #000;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        opacity: 0.7;
+    }
+
+    .table tr td a {
+        font-size: 18px;
+        font-weight: 900;
+        margin: 0 3px;
+    }
+
+    .custom-pagination .page-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        margin: 0 9px;
+    }
+
+    .custom-pagination .page-item.active .page-link {
+        background-color: #20DF7F;
+        border-color: #20DF7F;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(3) .page-link {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(3) .page-link:hover {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(4) .page-link {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(4) .page-link:hover {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(5) .page-link {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(5) .page-link:hover {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-pagi .pagi-link[aria-label="Précédent"],
+    .custom-pagination .page-pagi .pagi-link[aria-label="Suivant"] {
+        text-decoration: none;
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .container h3 {
+            margin-left: 0;
+        }
+
+        .table {
+            width: 98%;
+            margin: 20px 12px 0 0;
+        }
+
+        .table th {
+            font-size: 12px;
+        }
+
+        .table tr td {
+            font-size: 12px;
+        }
+
+        .table tr td a {
+            font-size: 14px;
+            margin: 0 2px;
+        }
+
+        .custom-pagination {
+            margin: 15px 35px 0 0;
+        }
+    }
+</style>
+
+<body>
+
+    <body>
+        <div class="row text-white position-relative gx-0 unNomDeClasseSpecial">
+            <div class="col-12 col-md-2 sidebar">
+                <h1 class="text-center text-capitalize my-4 bakeli-tontine">
+                    <span><i class="bi bi-wallet-fill"></i></span>
+                    <span class="fw-bold">Bakeli tontine</span>
+                </h1>
+                <nav class="pt-2 pt-lg-4" id="navi">
+                    <ul class="ps-0 align-items-center" id="nav-ul">
+                        <li class="my-3 mx-0">
+                            <a href="Dashboard.html" class="text-white">
+                                <span class="fs-5 align-middle pe-2"><i class="bi bi-menu-button"></i></span>
+                                <span class="text-capitalize nav-link-items link-name-hidden">dashboard</span>
+                            </a>
+                        </li>
+                        <li class="my-3 mx-0">
+                            <a href="utilisateur.html" class="text-white">
+                                <span class="fs-5 align-middle pe-2"><i class="bi bi-person"></i></span>
+                                <span class="text-capitalize nav-link-items link-name-hidden">Utilisateurs</span>
+                            </a>
+                        </li>
+                        <li class="my-3 mx-0">
+                            <a href="cotisations.html" class="text-white">
+                                <span class="fs-5 align-middle pe-2"><i class="bi bi-cash-coin"></i></span>
+                                <span class="text-capitalize nav-link-items link-name-hidden">cotisations</span>
+                            </a>
+                        </li>
+                        <!-- ====================== Dropdown param ======================= -->
+                        <li class="dropdown my-3 mx-0" id="param-dropdown">
+                            <span class="dropdown-toggle text-capitalize nav-link-items" type="button"
+                                data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                                <span class="fs-5 align-middle pe-2">
+                                    <i class="bi bi-gear"></i>
+                                </span>
+                                <span class="text-capitalize link-name-hidden" id="nav-link-items">paramètres</span>
+                            </span>
+                            <ul class="dropdown-menu border-0">
+                                <li class="dropdown-item text-capitalize">
+                                    <a href="parametresGeneraux.html" class="text-white nav-param_link-items">
+                                        paramétres généraux
+                                    </a>
+                                </li>
+                                <li class="dropdown-item text-capitalize">
+                                    <a href="parametres-utilisateurs.html" class="text-white nav-param_link-items">
+                                        utilisateurs
+                                    </a>
+                                </li>
+                                <li class="dropdown-item text-capitalize">
+                                    <a href="archive.html" class="text-white nav-param_link-items">
+                                        archives
+                                    </a>
+                                </li>
+                                <li class="dropdown-item text-capitalize">
+                                    <a href="bloquer.html" class="text-white nav-param_link-items">
+                                        membres bloqué
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- ================================================================== -->
+                        <!-- ======================Dropdup reponsive param======================== -->
+                        <li class="my-3 mx-0" id="param-dropu">
+                            <span class="" id="start">
+                                <span style="--i:0;--x:0;--y:0" class="fs-5 align-middle pe-2"
+                                    id="link-animation-start">
+
+                                    <i class="bi bi-gear" id="link-animation-start-param"></i>
+                                    <i class="bi bi-x-circle" id="link-animation-stop-param"></i>
+                                </span>
+                                <!-- ANIMATION -->
+                                <span style="--i:1;--x:0;--y:-5" id="fas"
+                                    class="link-animation position-absolute p-sm-1">
+                                    <a href="parametres-utilisateurs.html"><i class="bi bi-gear-fill text-white"></i></a>
+                                </span>
+                                <span style="--i:2;--x:0;--y:-10" class="link-animation position-absolute p-sm-1">
+                                    <a href="#"><i class="bi bi-person text-white"></i></a>
+                                </span>
+                                <span style="--i:3;--x:0;--y:-15" class="link-animation position-absolute p-sm-1">
+                                    <a href="archive.html"><i class="bi bi-archive text-white"></i></a>
+                                </span>
+                                <span style="--i:4;--x:0;--y:-20" class="link-animation position-absolute p-sm-1">
+                                    <a href="bloquer.html"><i class="bi bi-slash-circle text-white"></i></i></a>
+                                </span>
+                            </span>
+
+                        </li>
+                        <!-- ====================================================================== -->
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-12 col-md-10 offset-md-2 position-relative">
+                <header class="position-fixed px-2" id="header">
+                    <div class="ms-md-4 me-md-4" id="header-container">
+                        <div class="d-flex flex-row justify-content-between ">
+                            <h2 class="my-auto fw-bold option-menu">
+                                Archives
+                            </h2>
+                            <div class="d-flex align-middle profil-compte">
+
+                                <span class="fs-3 me-2 me-md-4 my-auto position-relative clock"><i
+                                        class="bi bi-bell"></i>
+                                    <span
+                                        class="position-absolute start-75 translate-middle badge rounded-circle text-center"
+                                        id="badge">
+                                        4
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </span>
+
+                                <div class="d-flex mx-2" id="header-user-profil">
+                                    <div class="d-flex">
+                                        <img src="images/Ellipse 82.png" class="rounded-circle me-2 me-md-4 my-auto"
+                                            id="profil-img" alt="">
+                                        <div class="d-flex flex-column me-md-4 lh-1 py-auto">
+                                            <h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3>
+                                            <p class="text-muted py-0 user-type">Administrateur</p>
+                                        </div>
+                                        <button type="button" class="btn fs-2 fw-bold leBoutonPourSeDeconnecter"
+                                            id="leBoutonPourSeDeconnecter" onclick="deconnexionButton()">
+                                            <i class="bi bi-power"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="">
+                    <!-- LE CONTENU DE LA PAGE ICI -->
+                    <div class="">
+                        <section class="table-content">
+                            <div class="header">
+                                <h1 class="fs-4">Archives</h1>
+                            </div>
+                            <div class="container mt-4">
+                                <h3 class="mb-4">10 Membres Archivés</h3>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Membres</th>
+                                            <th>Date début</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Selena Roy</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Emma Watson</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jhon Robert</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> Anne Hathaway</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ravi Shankar</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Emma Stone</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Selena Roy</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Selena Roy</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Selena Roy</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Selena Roy</td>
+                                            <td>01/01/2022</td>
+                                            <td>
+                                                <a href="#" class="text-black"><i class="bi bi-eye"></i></a>
+                                                <a href="#" class="text-success"><i
+                                                        class="bi bi-arrow-up-square"></i></a>
+                                            </td>
+                                        </tr>
+                                    <tbody id="table-body">
+                                </table>
+                                <nav aria-label="Page navigation">
+                                    <ul class="pagination justify-content-center custom-pagination">
+                                        <li class="page-pagi disabled">
+                                            <a class="pagi-link text-secondary" href="#" tabindex="-1"
+                                                aria-disabled="true" aria-label="Précédent">Previous page</a>
+                                        </li>
+                                        <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-pagi">
+                                            <a class="pagi-link text-black" href="#" aria-label="Suivant">Next page</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+             <script src="pagination.js"></script>
+        <script type="text/javascript" src="archive-bloquer.js"></script>
+        <script type="module" src="signOut.js"></script>
+    </body>
+
+</html>

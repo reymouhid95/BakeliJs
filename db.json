@@ -1,0 +1,258 @@
+{
+  "users": [
+    {
+      "id": "1693505230061",
+      "address": "Parcelles Assainies Unité 24",
+      "date": "2023-08-31",
+      "email": "thiernooury89@gmail.com",
+      "name": "Bah",
+      "organisation": "bakeli",
+      "prenom": "Oury",
+      "profession": "juriste",
+      "telephone": "774443322",
+      "cotisations": [
+        {
+          "dateCotisation": "2023-01-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-02-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-03-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-04-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-05-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-06-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-07-05",
+          "montantCotisation": "25000"
+        }
+      ]
+    },
+    {
+      "id": "1693505333501",
+      "address": "yoff",
+      "date": "2023-08-31",
+      "email": "tallbachir80@gmail.com",
+      "name": "Tall",
+      "organisation": "bakeli",
+      "prenom": "chams",
+      "profession": "etudiant",
+      "telephone": "771809917",
+      "cotisations": [
+        {
+          "dateCotisation": "2023-01-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-02-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-03-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-04-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-05-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-06-05",
+          "montantCotisation": "25000"
+        }
+      ]
+    },
+    {
+      "id": "1693505375010",
+      "address": "Mariste",
+      "date": "2023-08-31",
+      "email": "aichatimbi74@gmail.com",
+      "name": "Barry",
+      "organisation": "bakeli",
+      "prenom": "aissatou",
+      "profession": "etudiante",
+      "telephone": "774443322",
+      "cotisations": [
+        {
+          "dateCotisation": "2023-01-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-02-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-03-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-04-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-05-05",
+          "montantCotisation": "25000"
+        }
+      ]
+    },
+    {
+      "id": "1693505432145",
+      "address": "Point-E",
+      "date": "2023-08-31",
+      "email": "kodanne-bakeli@gmail.com",
+      "name": "Coulibaly",
+      "organisation": "bakeli",
+      "prenom": "Kodanne",
+      "profession": "etudiante",
+      "telephone": "774443322",
+      "cotisations": [
+        {
+          "dateCotisation": "2023-01-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-02-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-03-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-04-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-05-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-06-05",
+          "montantCotisation": "25000"
+        }
+      ]
+    },
+    {
+      "id": "1693505497013",
+      "address": "Front de terre",
+      "date": "2023-08-31",
+      "email": "serignemourtallasyll972@gmail.com",
+      "name": "Sylla",
+      "organisation": "bakeli",
+      "prenom": "Serigne",
+      "profession": "etudiant",
+      "telephone": "774443322",
+      "cotisations": [
+        {
+          "dateCotisation": "2023-01-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-02-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-03-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-04-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-05-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-06-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-07-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-08-05",
+          "montantCotisation": "25000"
+        }
+      ]
+    },
+    {
+      "id": "1693505582603",
+      "address": "Mariste",
+      "date": "2023-08-31",
+      "email": "yaya1999@gmail.com",
+      "name": "Dia",
+      "organisation": "bakeli",
+      "prenom": "yaya",
+      "profession": "etudiant",
+      "telephone": "774443322",
+      "cotisations": [
+        {
+          "dateCotisation": "2023-01-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-02-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-03-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-04-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-05-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-06-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-07-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-08-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-09-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-10-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-11-05",
+          "montantCotisation": "25000"
+        },
+        {
+          "dateCotisation": "2023-12-05",
+          "montantCotisation": "25000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+    <link rel="stylesheet" href="UserDashboard.css">
+    <link rel="stylesheet" href="newSidebarUser.css">
+    <title>Bakeli Tontine</title>
+</head>
+
+<body>
+    <div class="row text-white position-relative gx-0 unNomDeClasseSpecial">
+        <div class="col-12 col-md-2 sidebar">
+            <h1 class="text-center text-capitalize my-4 bakeli-tontine">
+                <span><i class="bi bi-wallet-fill"></i></span>
+                <span class="">Money-Suscribe</span>
+            </h1>
+            <nav class="pt-2 pt-lg-4" id="navi">
+                <ul class="ps-0" id="nav-ul">
+                    <li class="my-3 mx-0">
+                        <a href="UserDashboard.html" class="text-white link-container">
+                            <span class="fs-5 align-middle pe-2">
+                                <i class="bi bi-cash-coin"></i>
+                            </span>
+                            <span class="text-capitalize nav-link-items link-name-hidden">cotisations</span>
+                        </a>
+                    </li>
+                    <li class="my-3 mx-0" id="icone-infos">
+                        <a href="UserDashboard.html" class="text-white link-container">
+                            <span class="fs-5 align-middle pe-2">
+                                <i class="bi bi-info-circle"></i>
+                            </span>
+                            <span class="text-capitalize nav-link-items link-name-hidden">
+                                informations
+                            </span>
+                        </a>
+                    </li>
+                    <li class="my-3 mx-0" id="icone-chg-password">
+                        <a href="" class="text-white link-container">
+                            <span class="fs-5 align-middle pe-2">
+                                <i class="bi bi-person-lock"></i>
+                            </span>
+                            <span class="text-capitalize nav-link-items link-name-hidden">
+                                changer de mot de passe
+                            </span>
+                        </a>
+                    </li>
+                    <li class="dropdown my-3 mx-0" id="profil-user-link">
+                        <span class="dropdown-toggle text-capitalize nav-link-items link-container" type="button"
+                            data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                            <span class="fs-5 align-middle pe-2"><i class="bi bi-person"></i></span>
+                            <span class="link-name-hidden" id="nav-link-items">profil</span>
+                        </span>
+                        <ul class="dropdown-menu border-0">
+                            <li class="dropdown-item text-capitalize">
+                                <a href="parametresUtilisateur.html" class="text-white nav-param_link-items link-name-hidden">
+                                    informations
+                                </a>
+                            </li>
+                            <li class="dropdown-item text-capitalize">
+                                <a href="changePassword.html" class="text-white nav-param_link-items link-name-hidden">
+                                    changer mdp
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-12 col-md-10 offset-md-2">
+            <header class="position-fixed container d-flex flex-row justify-content-between px-2" id="header">
+
+                <h2 class="my-auto ps-3 ms-3 fw-bold option-menu">
+                    Cotisations
+                </h2>
+                <div class="d-flex profil-compte">
+
+                    <div class="d-flex mx-2">
+                        <img src="images/profil.png" class="rounded-circle me-2 me-md-4 my-auto" alt="">
+                        <div class="d-flex flex-column lh-1 py-auto">
+                            <h3 class="fw-bold py-0 user-name"></h3>
+                            <p class="text-muted py-0 user-type">Utilisateur</p>
+                        </div>
+                        <button type="button" class="btn fs-2 fw-bold mx-5" id="leBoutonPourSeDeconnecter">
+                            <i class="bi bi-power"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="mb-5 down">
+                <main class="userdashboard mb-5 pb-5 w-100 mx-auto">
+                    <div class="container  main">
+                        <div class="row row-cols-1 row-cols-md-3 my-4 justify-content-center">
+                            <div class="col-12 col-md-4 my-1">
+                                <div class="card mb-3 shadow ">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Total Cotisé</h6>
+                                        <p class="card-text">75.000FCFA</p>
+                                        <p class="card-text"><small class="text-body-secondary">Nombre de
+                                                cotisations:04</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 my-1">
+                                <div class="card mb-3 shadow ">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Montant Restant</h6>
+                                        <p class="card-text">200.000FCFA</p>
+                                        <p class="card-text"><small class="text-body-secondary">cotisations
+                                                restantes:08</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 caisse my-1">
+                                <div class="card mb-3 shadow ">
+                                    <div class="card-body d-flex">
+                                        <div class="align-self-stretch me-3 me-md-3"><i
+                                                class="fa-solid fa-2x fa-sack-dollar text-success bg-success-subtle p-4 p-md-2 p-lg-4 mb-2 rounded"></i>
+                                        </div>
+                                        <div class="">
+                                            <h5 class="card-title">Caisse</h5>
+                                            <div class="card-text text-primary">
+                                                <span class="text-muted ">100.000FCFA </span><span class="fw-bold">/
+                                                    300.000FCFA</span>
+                                                <div class="progress " role="progressbar" aria-label="Basic example"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                                    <div class="progress-bar bg-success" style="width: 25%"></div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid w-100">
+                            <div class="d-md-flex "><a class="btn btn-primary ms-0 ms-md-auto mb-3"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Je cotise</a></div>
+                            <div class="table-responsive">
+                                <table class="table table-borderless my-3" id="tableOne">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bg-success text-primary">Mois</th>
+                                            <th scope="col" class="bg-success text-primary">Date</th>
+                                            <th scope="col" class="bg-success text-primary">Montant</th>
+                                            <th scope="col" class="bg-success text-primary">Statut</th>
+                                            <th scope="col" class="bg-success text-primary">Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                </table>
+                                <table class="table table-borderless my-3 d-none" id="tableTwo">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="bg-success text-primary">Mois</th>
+                                            <th scope="col" class="bg-success text-primary">Date</th>
+                                            <th scope="col" class="bg-success text-primary">Montant</th>
+                                            <th scope="col" class="bg-success text-primary">Statut</th>
+                                            <th scope="col" class="bg-success text-primary">Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                </table>
+                            </div>
+                            <div class="my-4 d-flex justify-content-center">
+                                <nav aria-label="...">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled prev" href="#">
+                                            <a class="page-link border-0 bg-transparent text-dark Prev"
+                                                onclick="Prev()">Previous page</a>
+                                        </li>
+                                        <li class="page-item active" aria-current="page"><a
+                                                class="page-link border-0 bg-transparent Prev" href="#">
+                                                <div
+                                                    class="bg-success rounded-circle d-flex justify-content-center align-items-center">
+                                                    <b>1</b></div>
+                                            </a></li>
+                                        <li class="page-item next">
+                                            <a class="page-link border-0 bg-transparent btn Next" href="#">
+                                                <div
+                                                    class="bg-white rounded-circle d-flex justify-content-center align-items-center">
+                                                    <b>2</b></div>
+                                            </a>
+                                        </li>
+                                        <li class="page-item nexte">
+                                            <a class="page-link text-dark fw-bold border-0 bg-transparent Next"
+                                                href="#">Next page</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Vertically centered modal -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-body text-center cotise">
+                                        <img src="images/profil.png" class="img-fluid rounded-circle w-25 img-profil"
+                                            alt="photo de faly seck">
+                                        <h3 class="text-primary user-name">Faly Seck</h3>
+                                        <h3 class="text-primary">Ajouter une cotisation</h3>
+                                        <form action="" class="form">
+                                            <input type="date" name="" id="" class="form-control mb-3 date">
+                                            <input type="number" name="" id="" class="form-control mb-3 number">
+                                            <button class="btn btn-primary btncotise">S'enregistrer</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------modal detail------>
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body text-primary">
+                                    <h3 class="text-primary text-center">Détails cotisations</h3>
+                                    <p>Mois <br>Janvier</p>
+                                    <p>Heure <br>22h30</p>
+                                    <p>Montant <br>25.000FCFA</p>
+                                    <p>Statut <br><span class="text-success">En attente</span></p>
+                                    <div class="d-flex"><a class="btn btn-primary mx-auto mb-3" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal2">Modifier</a></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <img src="./images/profil.png"
+                                        class="img-fluid rounded-circle border border-success w-25 img-profil"
+                                        alt="photo de faly seck">
+                                    <h3 class="text-primary user-name>Faly Seck</h3>
+                                    <h3 class=" text-primary">modifier la cotisation</h3>
+                                    <form action="">
+                                        <input type="date" name="" id="" class="form-control mb-3">
+                                        <input type="number" name="" id="" class="form-control mb-3">
+                                        <button class="btn btn-primary">mettre à jour</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </main>
+            </div>
+        </div>
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+         <script type="module" src="UserDashboard.js"></script>
+         <script type="module" src="signOut.js"></script>
+    <script type="text/javascript" src="newSidebarUser.js"></script>
+</body>
+
+</html>

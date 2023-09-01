@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+		crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+	<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth-compat.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="parametres-generaux.css">
+
+	<title>Parametres généraux</title>
+
+</head>
+
+<body>
+	<div class="row text-white position-relative gx-0 unNomDeClasseSpecial">
+		<div class="col-12 col-md-2 sidebar">
+			<h1 class="text-center text-capitalize my-4 bakeli-tontine">
+				<span><i class="bi bi-wallet-fill"></i></span>
+				<span class="fw-bold">Bakeli tontine</span>
+			</h1>
+			<nav class="pt-2 pt-lg-4" id="navi">
+				<ul class="ps-0 align-items-center" id="nav-ul">
+					<li class="my-3 mx-0">
+						<a href="dashboard.html" class="text-white">
+							<span class="fs-5 align-middle pe-2"><i
+									class="bi bi-menu-button"></i></span>
+							<span
+								class="text-capitalize nav-link-items link-name-hidden">dashboard</span>
+						</a>
+					</li>
+					<li class="my-3 mx-0">
+						<a href="utilisateur.html" class="text-white">
+							<span class="fs-5 align-middle pe-2"><i
+									class="bi bi-person"></i></span>
+							<span
+								class="text-capitalize nav-link-items link-name-hidden">Utilisateurs</span>
+						</a>
+					</li>
+					<li class="my-3 mx-0">
+						<a href="cotisations.html" class="text-white">
+							<span class="fs-5 align-middle pe-2"><i
+									class="bi bi-cash-coin"></i></span>
+							<span
+								class="text-capitalize nav-link-items link-name-hidden">cotisations</span>
+						</a>
+					</li>
+					<!-- ====================== Dropdown param ======================= -->
+					<li class="dropdown my-3 mx-0" id="param-dropdown">
+						<span class="dropdown-toggle text-capitalize nav-link-items"
+							type="button" data-bs-toggle="dropdown"
+							data-bs-auto-close="false" aria-expanded="false">
+							<span class="fs-5 align-middle pe-2">
+								<i class="bi bi-gear"></i>
+							</span>
+							<span class="text-capitalize link-name-hidden"
+								id="nav-link-items">paramètres</span>
+						</span>
+						<ul class="dropdown-menu border-0">
+							<li class="dropdown-item text-capitalize">
+								<a href="parametresGeneraux.html"
+									class="text-white nav-param_link-items">
+									paramétres généraux
+								</a>
+							</li>
+							<li class="dropdown-item text-capitalize">
+								<a href="parametres-utilisateurs.html"
+									class="text-white nav-param_link-items">
+									utilisateurs
+								</a>
+							</li>
+							<li class="dropdown-item text-capitalize">
+								<a href="archive.html"
+									class="text-white nav-param_link-items">
+									archives
+								</a>
+							</li>
+							<li class="dropdown-item text-capitalize">
+								<a href="bloquer.html"
+									class="text-white nav-param_link-items">
+									membres bloqué
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- ================================================================== -->
+					<!-- ======================Dropdup reponsive param======================== -->
+					<li class="my-3 mx-0" id="param-dropu">
+						<span class="" id="start">
+							<span style="--i:0;--x:0;--y:0" class="fs-5 align-middle pe-2"
+								id="link-animation-start">
+
+								<i class="bi bi-gear"
+									id="link-animation-start-param"></i>
+								<i class="bi bi-x-circle"
+									id="link-animation-stop-param"></i>
+							</span>
+							<!-- ANIMATION -->
+							<span style="--i:1;--x:0;--y:-5" id="fas"
+								class="link-animation position-absolute p-sm-1">
+								<a href="parametres-utilisateurs.html"><i
+										class="bi bi-gear-fill text-white"></i></a>
+							</span>
+							<span style="--i:2;--x:0;--y:-10"
+								class="link-animation position-absolute p-sm-1">
+								<a href="#"><i class="bi bi-person text-white"></i></a>
+							</span>
+							<span style="--i:3;--x:0;--y:-15"
+								class="link-animation position-absolute p-sm-1">
+								<a href="archive.html"><i
+										class="bi bi-archive text-white"></i></a>
+							</span>
+							<span style="--i:4;--x:0;--y:-20"
+								class="link-animation position-absolute p-sm-1">
+								<a href="bloquer.html"><i
+										class="bi bi-slash-circle text-white"></i></i></a>
+							</span>
+						</span>
+
+					</li>
+					<!-- ====================================================================== -->
+				</ul>
+			</nav>
+		</div>
+		<div class="col-12 col-md-10 offset-md-2">
+			<header class="position-fixed px-2" id="header">
+				<div class="ms-md-4 me-md-4" id="header-container">
+					<div class="d-flex flex-row justify-content-between ">
+						<h2 class="my-auto fw-bold option-menu">
+							Paramètres
+						</h2>
+						<div class="d-flex align-middle profil-compte">
+
+							<span class="fs-3 me-2 me-md-4 my-auto position-relative clock"><i
+									class="bi bi-bell"></i>
+								<span class="position-absolute start-75 translate-middle badge rounded-circle text-center"
+									id="badge">
+									4
+									<span class="visually-hidden">unread
+										messages</span>
+								</span>
+							</span>
+
+							<div class="d-flex mx-2" id="header-user-profil">
+								<div class="d-flex">
+									<img src="images/profil.png"
+										class="rounded-circle me-2 me-md-4 my-auto"
+										id="profil-img" alt="">
+									<div
+										class="d-flex flex-column me-md-4 lh-1 py-auto">
+										<h3 class="fw-bold py-0 user-name">
+											Ndiaga Sall</h3>
+										<p class="text-muted py-0 user-type">
+											Administrateur</p>
+									</div>
+									<button type="button"
+										class="btn fs-2 fw-bold leBoutonPourSeDeconnecter"
+										id="leBoutonPourSeDeconnecter"
+										onclick="deconnexionButton()">
+										<i class="bi bi-power"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="container py-4 text-dark" id="parametresGeneraux">
+				<div class="w-100 content">
+					<div class="pb-4">
+						<h2>Paramètres généraux</h2>
+					</div>
+					<div class="bg-light d-flex flex-wrap" id="contentInfo">
+						<div class="col-md-4 col-sm-12 text-center" id="admin">
+
+						</div>
+						<div class="col-md-8 col-sm-12" id="adminInformations">
+							<div class="col-md-12" id="informationGenerale">
+							</div>
+							<div class="col-md-12">
+								<h4 class="p-2 fw-bold">Statistiques</h4>
+								<div
+									class="col d-flex justify-content-between border-bottom pb-3">
+									<div class="col-md-8">Nombre de membre ajoutés
+									</div>
+									<div class="col-md-4 text-center">25</div>
+								</div>
+								<div
+									class="col d-flex justify-content-between border-bottom pb-3">
+									<div class="col-md-8">Nombre de membre archivés
+									</div>
+									<div class="col-md-4 text-center">10</div>
+								</div>
+								<div
+									class="col d-flex justify-content-between border-bottom pb-3">
+									<div class="col-md-8">Nombre de membre bloqués
+									</div>
+									<div class="col-md-4 text-center">4</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+	crossorigin="anonymous"></script>
+<script type="text/javascript" src="parametresGeneraux.js"></script>
+<script type="module" src="signOut.js"></script>
+
+</html>

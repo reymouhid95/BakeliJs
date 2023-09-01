@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+     <link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+    <link rel="stylesheet" href="parametresUtilisateur.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage-compat.js"></script>
+    <title>Parametres généraux</title>
+  </head>
+  <body>
+    <div class="row text-white position-relative gx-0 unNomDeClasseSpecial">
+      <div class="col-12 col-md-2 sidebar">
+        <h1 class="text-center text-capitalize my-4 bakeli-tontine">
+          <span><i class="bi bi-wallet-fill"></i></span>
+          <span class="fw-bold">Money-Suscribe</span>
+        </h1>
+        <nav class="pt-2 pt-lg-4" id="navi">
+          <ul class="ps-0" id="nav-ul">
+            <li class="my-3 mx-0">
+              <a href="UserDashboard.html".html" class="text-white link-container">
+                <span class="fs-5 align-middle pe-2">
+                  <i class="bi bi-cash-coin"></i>
+                </span>
+                <span class="text-capitalize nav-link-items link-name-hidden"
+                  >cotisations</span
+                >
+              </a>
+            </li>
+            <li class="my-3 mx-0" id="icone-infos">
+              <a href="UserDashboard.html" class="text-white link-container">
+                <span class="fs-5 align-middle pe-2">
+                  <i class="bi bi-info-circle"></i>
+                </span>
+                <span class="text-capitalize nav-link-items link-name-hidden">
+                  informations
+                </span>
+              </a>
+            </li>
+            <li class="my-3 mx-0" id="icone-chg-password">
+              <a href="UserDashboard.html" class="text-white link-container">
+                <span class="fs-5 align-middle pe-2">
+                  <i class="bi bi-person-lock"></i>
+                </span>
+                <span class="text-capitalize nav-link-items link-name-hidden">
+                  changer de mot de passe
+                </span>
+              </a>
+            </li>
+            <li class="dropdown my-3 mx-0" id="profil-user-link">
+              <span
+                class="dropdown-toggle text-capitalize nav-link-items link-container"
+                type="button"
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="false"
+                aria-expanded="false"
+              >
+                <span class="fs-5 align-middle pe-2"
+                  ><i class="bi bi-person"></i
+                ></span>
+                <span class="link-name-hidden" id="nav-link-items">profil</span>
+              </span>
+              <ul class="dropdown-menu border-0">
+                <li class="dropdown-item text-capitalize">
+                  <a
+                    href="utilisateur.html"
+                    class="text-white nav-param_link-items link-name-hidden"
+                  >
+                    informations
+                  </a>
+                </li>
+                <li class="dropdown-item text-capitalize">
+                  <a
+                    href="changePassword.html"
+                    class="text-white nav-param_link-items link-name-hidden"
+                  >
+                    changer mdp
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-12 col-md-10 offset-md-2 position-relative">
+        <header
+          class="d-flex flex-row justify-content-between px-2"
+          id="header"
+        >
+          <h2 class="my-auto ps-3 ms-4 fw-bold option-menu">Profil</h2>
+          <div class="d-flex profil-compte">
+            <div class="d-flex mx-2">
+              <img
+                src="images/profil.png"
+                class="rounded-circle me-2 me-md-4 my-auto"
+                id="profil-img"
+                alt=""
+              />
+              <div class="d-flex flex-column lh-1 py-auto">
+                <h3 class="fw-bold py-0 user-name"></h3>
+                <p class="text-muted py-0 user-type">User</p>
+              </div>
+              <button
+                type="button"
+                class="btn fs-2 fw-bold"
+                id="leBoutonPourSeDeconnecter"
+              >
+                <i class="bi bi-power"></i>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div class="container-fluid py-4 text-dark" id="parametresUtilisateur">
+          <div class="w-100 content">
+            <div class="title pb-4">
+              <h2>Informations</h2>
+            </div>
+            <div class="bg-light d-flex flex-wrap" id="contentInfo">
+              <div class="col-md-4 text-center editAdmin" id="admin"></div>
+              <div class="col-md-7 information">
+                <div class="">
+                  <h4>Information Générale</h4>
+                  <form class="row g-3">
+                    <div class="col-md-6">
+                      <label for="validationDefault01" class="form-label"
+                        >Prénom</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputPrenom"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="validationDefault02" class="form-label"
+                        >Nom</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputNom"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <label for="validationDefault03" class="form-label"
+                        >Téléphone</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputPhone"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <label for="validationDefault03" class="form-label"
+                        >E-mail</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputEmail"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <label for="validationDefault05" class="form-label"
+                        >Statut</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputStatut"
+                        value="Utilisateur"
+                        required
+                        disabled
+                      />
+                    </div>
+                    <div class="col-12 bttn"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
+  <script ty src="editProfilUser.js"></script>
+  <script type="module" src="signOut.js"></script>
+</html>

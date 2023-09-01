@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cccccc;
+  font-family: Montserrat;
+  font-size: medium;
+}
+
+.header {
+  background: #ededee;
+  margin-top: 75px;
+  padding: 25px;
+}
+
+.header h1 {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+li {
+  list-style-type: none;
+}
+
+#navi ul li {
+  padding-left: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sidebar {
+  background-color: #093545;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidebar .bakeli-tontine {
+  font-size: 22px;
+}
+
+.nav-link-items {
+  font-size: 17px;
+}
+
+.nav-param_link-items {
+  font-size: 15px;
+}
+
+.dropdown .dropdown-menu li:hover {
+  background-color: transparent;
+}
+
+.dropdown .dropdown-menu li {
+  padding-left: 0.2rem;
+}
+
+.style-nav-elem {
+  background-color: #20df7f;
+  border-left: 0.2rem solid white;
+  padding-left: 0.8rem;
+}
+
+.dropdown .dropdown-menu {
+  color: white;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#header {
+  width: 83.333%;
+  padding-top: 10px;
+  box-shadow: 0 0 8px 0.7px;
+  background-color: #fff;
+  color: #333;
+}
+
+#header div span .bi {
+  font-size: 25px;
+}
+
+#header .user-name {
+  font-size: 21px;
+}
+
+#header .user-type {
+  font-size: 15px;
+}
+
+#header-btn-down {
+  background-color: transparent;
+}
+
+#header img {
+  width: 55px;
+  height: 55px;
+}
+
+#header #leBoutonPourSeDeconnecter {
+  outline: none !important;
+}
+
+/* Style paramètres utilisateurs */
+
+label {
+  animation: SlideLeft 3s;
+  color: black;
+}
+
+.update {
+  background-color: rgba(9, 53, 69, 1) !important;
+  border: none !important;
+  color: whitesmoke !important;
+  font-weight: bold;
+}
+
+.update:hover {
+  background-color: rgba(32, 223, 127, 1) !important;
+  transition: 2s;
+  color: rgba(9, 53, 69, 1) !important;
+}
+
+.param {
+  color: black;
+}
+
+.p:hover {
+  background: linear-gradient(
+    to left,
+    rgba(9, 53, 69, 1) 98%,
+    rgba(32, 223, 127, 1) 2%
+  );
+  width: 100%;
+  height: 100%;
+  transition: 2s;
+  cursor: pointer;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+input {
+  animation: SlideRight 3s;
+  border: 1px solid black !important;
+}
+
+@keyframes SlideRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes SlideLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .down {
+    margin-bottom: 100px;
+  }
+}
+
+.bg-secondary-subtle {
+  background-color: rgba(13, 13, 13, 0.19) !important;
+}
+
+/* ********************** PAGINATION ******************* */
+
+.custom-pagination .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 0 9px;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #20df7f;
+  border-color: #20df7f;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(3) .page-link {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(3) .page-link:hover {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(4) .page-link {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(4) .page-link:hover {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(5) .page-link {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-item:nth-child(5) .page-link:hover {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #efeded;
+  border-color: #efeded;
+  color: #1f1e1e;
+}
+
+.custom-pagination .page-pagi .pagi-link[aria-label="Précédent"],
+.custom-pagination .page-pagi .pagi-link[aria-label="Suivant"] {
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.down {
+  margin-bottom: 80px;
+}

@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+.down {
+  margin-top: 90px;
+}
+
+.userdashboard .card {
+  width: 100%;
+  height: 100%;
+}
+.userdashboard .bg-success {
+  background-color: #20df7f !important;
+}
+.userdashboard .main {
+  width: 90%;
+}
+
+.userdashboard .text-success {
+  color: #20df7f !important;
+}
+
+.userdashboard .border-success {
+  border-color: #20df7f !important;
+  border: 1px solid rgba(0, 0, 0, 0.123) !important;
+  border-left: 8px solid #20df7f !important;
+}
+
+.userdashboard .border-primary {
+  border-color: #093545 !important;
+  border: 1px solid rgba(0, 0, 0, 0.123) !important;
+  border-left: 8px solid #093545 !important;
+}
+
+.userdashboard .text-primary {
+  color: #093545 !important;
+}
+
+.userdashboard .bg-primary,
+.userdashboard .btn-primary {
+  background-color: #093545 !important;
+}
+
+.userdashboard .caisse .progress {
+  height: 5px !important;
+}
+.userdashboard .caisse .card-text {
+  font-size: 14px !important;
+}
+
+.userdashboard .table {
+  width: 100%;
+  min-width: 600px;
+  margin: auto;
+}
+.userdashboard .pagination .page-link div {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (max-width: 768px) {
+  .userdashboard .caisse .card {
+    background-color: #093545;
+    color: white;
+  }
+
+  .userdashboard .caisse .card span {
+    color: white !important;
+  }
+
+  .userdashboard .caisse i {
+    background-color: #20df8049 !important;
+  }
+  .userdashboard {
+    width: 75% !important;
+  }
+}

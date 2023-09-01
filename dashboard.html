@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- ========== Bootstrap Icons Link ======== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<style>
+    #navPage{
+        position: relative;
+        bottom: 20vh;
+    }
+    .pagination {
+        margin-right: 40%;
+    }
+    .custom-pagination .page-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        margin: 0 9px;
+    }
+
+    .custom-pagination .page-item.active .page-link {
+        background-color: #20DF7F;
+        border-color: #20DF7F;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(3) .page-link {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(4) .page-link {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(5) .page-link {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-item:nth-child(3) .page-link:hover {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background-color: #efeded;
+        border-color: #efeded;
+        color: #1f1e1e;
+    }
+
+    .custom-pagination .page-pagi .pagi-link[aria-label="Précédent"],
+    .custom-pagination .page-pagi .pagi-link[aria-label="Suivant"] {
+        text-decoration: none;
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        .custom-pagination {
+            margin: 0 50px 20px;
+            padding-bottom: 30px;
+        }
+
+        #navPage{
+        position: relative;
+        bottom: 10vh;
+    }
+    }
+</style>
+
+<body>
+    <div class="row text-white position-relative gx-0 unNomDeClasseSpecial">
+        <div class="col-12 col-md-2 sidebar">
+			<h1 class="text-center text-capitalize my-4 bakeli-tontine">
+				<span><i class="bi bi-wallet-fill"></i></span> 
+				<span class="fw-bold">Bakeli tontine</span>
+			</h1>
+			<nav class="pt-2 pt-lg-4" id="navi">
+				<ul class="ps-0 align-items-center" id="nav-ul">
+					<li class="my-3 mx-0">
+						<a href="dashboard.html" class="text-white">
+							<span class="fs-5 align-middle pe-2"><i class="bi bi-menu-button"></i></span> 
+							<span class="text-capitalize nav-link-items link-name-hidden">dashboard</span>
+						</a>
+					</li>
+					<li class="my-3 mx-0">
+						<a href="utilisateur.html" class="text-white">
+							<span class="fs-5 align-middle pe-2"><i class="bi bi-person"></i></span> 
+							<span class="text-capitalize nav-link-items link-name-hidden">Utilisateurs</span>
+						</a>	
+					</li>
+					<li class="my-3 mx-0">
+						<a href="cotisations.html" class="text-white">
+							<span class="fs-5 align-middle pe-2"><i class="bi bi-cash-coin"></i></span> 
+							<span class="text-capitalize nav-link-items link-name-hidden">cotisations</span>
+						</a>	
+					</li>
+					<!-- ====================== Dropdown param ======================= -->
+					<li class="dropdown my-3 mx-0" id="param-dropdown">
+						<span class="dropdown-toggle text-capitalize nav-link-items" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+								<span class="fs-5 align-middle pe-2">
+									<i class="bi bi-gear"></i>
+								</span>
+								<span class="text-capitalize link-name-hidden" id="nav-link-items">paramètres</span>	
+						</span>
+						<ul class="dropdown-menu border-0">
+							<li class="dropdown-item text-capitalize">	
+								<a href="parametresGeneraux.html" class="text-white nav-param_link-items">
+									paramétres généraux
+								</a>
+							</li>
+							<li class="dropdown-item text-capitalize">
+								<a href="parametres-utilisateurs.html" class="text-white nav-param_link-items">
+									utilisateurs
+								</a>
+							</li>
+							<li class="dropdown-item text-capitalize">
+								<a href="archive.html" class="text-white nav-param_link-items">
+									archives
+								</a>
+							</li>
+							<li class="dropdown-item text-capitalize">
+								<a href="bloquer.html" class="text-white nav-param_link-items">
+									membres bloqués
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- ================================================================== -->
+					<!-- ======================Dropdup reponsive param======================== -->
+					<li class="my-3 mx-0" id="param-dropu">
+						<span class="" id="start">
+								<span style="--i:0;--x:0;--y:0" class="fs-5 align-middle pe-2" id="link-animation-start">
+
+									<i class="bi bi-gear" id="link-animation-start-param"></i>
+									<i class="bi bi-x-circle" id="link-animation-stop-param"></i>
+								</span> 
+							    <!-- ANIMATION -->
+							    <span style="--i:1;--x:0;--y:-5" id="fas" class="link-animation position-absolute p-sm-1">
+							    	<a href="parametres-utilisateurs.html"><i class="bi bi-gear-fill text-white"></i></a>
+							    </span>
+							    <span style="--i:2;--x:0;--y:-10" class="link-animation position-absolute p-sm-1">
+							    	<a href="utilisateur.html"><i class="bi bi-person text-white"></i></a>
+							    </span>
+							    <span style="--i:3;--x:0;--y:-15" class="link-animation position-absolute p-sm-1">
+							    	<a href="archive.html"><i class="bi bi-archive text-white"></i></a>
+							    </span>
+							    <span style="--i:4;--x:0;--y:-20" class="link-animation position-absolute p-sm-1">
+							    	<a href="bloquer.html"><i class="bi bi-slash-circle text-white"></i></i></a>
+							    </span>
+						    </span>	
+						 
+					</li>
+					<!-- ====================================================================== -->
+				</ul>
+			</nav>
+		</div>
+        <div class="col-12 col-md-10 offset-md-2">
+            <header class="position-fixed px-2" id="header">
+				<div class="ms-md-4 me-md-4" id="header-container">
+					<div class="d-flex flex-row justify-content-between ">	
+						<h2 class="my-auto fw-bold option-menu">
+							Admin Dashboard
+						</h2>
+						<div class="d-flex align-middle profil-compte">
+
+							<span class="fs-3 me-2 me-md-4 my-auto position-relative clock"><i class="bi bi-bell"></i>
+							  	<span class="position-absolute start-75 translate-middle badge rounded-circle text-center" id="badge">
+								    4
+								    <span class="visually-hidden">unread messages</span>
+							 	</span>
+							</span>
+
+							<div class="d-flex mx-2" id="header-user-profil">
+								<div class="d-flex">
+									<img src="images/Ellipse 82.png" class="rounded-circle me-2 me-md-4 my-auto" id="profil-img" alt="">
+									<div class="d-flex flex-column me-md-4 lh-1 py-auto">
+										<h3 class="fw-bold py-0 user-name">Ndiaga Sall</h3> 
+										<p class="text-muted py-0 user-type">Administrateur</p>
+									</div>
+									<button type="button" class="btn fs-2 fw-bold leBoutonPourSeDeconnecter" id="leBoutonPourSeDeconnecter" onclick="deconnexionButton()">
+										<i class="bi bi-power"></i>
+									</button> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+            <div class="container p-5 menuPage">
+                <section id="caisse" class=" p-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 this-cards-1">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card p-2 mb-3 shadow-sm bg-white">
+                                            <div class="p-2">
+                                                <p class="color-text">Juin</p>
+                                                <h4 class="fw-bolder text-card">225.000 FCFA</h4>
+                                                <p class="text-secondary">Nombre de cotisation: 27</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card p-2 mb-3 shadow-sm bg-white">
+                                            <div class="p-2">
+                                                <p class="color-text">Mai</p>
+                                                <h4 class="fw-bolder text-card">100.000 FCFA</h4>
+                                                <p class="text-secondary">Nombre de cotisation: 23</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 this-cards-1">
+                                <div class="card p-2 mb-5 shadow-sm bg-white">
+                                    <div class="d-flex p-2 justify-content-space-around">
+                                        <div class="icone-caisse p-4 mt-3">
+                                            <i class="icone-card fa-solid fa-sack-dollar fs-1"></i>
+                                        </div>
+                                        <div class="caisse m-2">
+                                            <p class="color-text">Caisse</p>
+                                            <div class="mtn text-break">
+                                                <h5 class="text-secondary ">3.500.000FCFA<span
+                                                    class="fw-bolder text-card">/5.000.000FCFA</span>
+                                                </h5>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar bg-vert" role="progressbar" style="width: 50%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section id="evolution" class="p-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 this-table">
+                                <div class="card bg-white shadow-sm rounded-3 mb-3">
+                                    <table class="table">
+                                        <thead class="">
+                                            <tr class="bg-table">
+                                                <th class="small bg-table">Evolution des cotisations en founction de temps</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <th>
+                                                <div class="chart">
+                                                    <canvas id="lineChart"></canvas>
+                                                </div>
+                                            </th>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 this-table">
+                                <div class="card card-diagramme bg-white shadow-sm rounded-3 mb-3">
+                                    <div class="chart">
+                                    <table class="table" id="TicketByDepartment">
+                                        <thead>
+                                            <tr class="">
+                                                <th class="small bg-table">Statistique</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <th class="cercle">
+                                                <div class="" id="doughnut-chart">
+                                                    <canvas class="" id="doughnut"></canvas>
+                                                </div>
+                                            </th>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section id="top-progression" class="p-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 this-table">
+                                <h2 class="m-3 text-card">Juin</h2>
+                                <div class="card bg-white shadow-sm">
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="bg-table">
+                                                <th class="small-1 bg-table rounded-th" scope="col">Membres</th>
+                                                <th class="small-1 bg-table" scope="col">Montant</th>
+                                                <th class="small-1 bg-table" scope="col">Date</th>
+                                                <th class="small-1 bg-table rounded-th-1" scope="col">Statut</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="TableauUn">
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Selena Roy</th>
+                                                <td>25.000 FCFA</td>
+                                                <td>01-06-2022</td>
+                                                <td class="text-valide fw-bolder">valide</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Emma Watson</th>
+                                                <td>25.000 FCFA</td>
+                                                <td>01-06-2022</td>
+                                                <td class="en-attente fw-bolder">En attente</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Jhon Robert</th>
+                                                <td>25.000 FCFA</td>
+                                                <td>01-06-2022</td>
+                                                <td class="text-valide fw-bolder">valide</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Anne Hathaway</th>
+                                                <td>25.000 FCFA</td>
+                                                <td>01-06-2022</td>
+                                                <td class="en-attente fw-bolder">En attente</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Ravi Shankar</th>
+                                                <td>25.000 FCFA</td>
+                                                <td>01-06-2022</td>
+                                                <td class="text-valide fw-bolder">valide</td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Emma Stone</th>
+                                                <td>25.000 FCFA</td>
+                                                <td>01-06-2022</td>
+                                                <td class="text-valide fw-bolder">valide</td>
+                                            </tr>
+                                            <tr>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 this-table">
+                                <h2 class="m-3 text-card">Top progression</h2>
+                                <div class="card bg-white shadow-sm">
+                                    <table class="table p-5">
+                                        <thead>
+                                            <tr>
+                                                <th class="small-1 bg-table rounded-th" scope="col">Membres</th>
+                                                <th class="small-1 bg-table" scope="col">Date début</th>
+                                                <th class="small-1 bg-table rounded-th-1" scope="col">Progression</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="p-5" id="TableauDeux">
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Selena Roy</th>
+                                                <td>01-06-2022</td>
+                                                <td class="flex">
+                                                    <div class="position-relative">
+                                                        <div class="progress free-bar">
+                                                            <div class="progress-bar bg-vert" role="progressbar"
+                                                                style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                                aria-valuemax="100">
+                                                            </div>
+                                                            <div class="progress-value"><span>100%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Jhon Robert</th>
+                                                <td>01-06-2022</td>
+                                                <td>
+                                                    <div class="position-relative">
+                                                        <div class="progress free-bar">
+                                                            <div class="progress-bar bg-vert" role="progressbar"
+                                                                style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                            <div class="progress-value"><span>100%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Emma Stone</th>
+                                                <td>01-06-2022</td>
+                                                <td>
+                                                    <div class="position-relative">
+                                                        <div class="progress free-bar">
+                                                            <div class="progress-bar bg-blue" role="progressbar"
+                                                                style="width: 64%" aria-valuenow="100" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                            <div class="progress-value"><span>64%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Emma Watson</th>
+                                                <td>01-06-2022</td>
+                                                <td>
+                                                    <div class="position-relative">
+                                                        <div class="progress free-bar">
+                                                            <div class="progress-bar bg-blue" role="progressbar"
+                                                                style="width: 57%" aria-valuenow="100" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                            <div class="progress-value"><span>57%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Anne Hathaway</th>
+                                                <td>01-06-2022</td>
+                                                <td>
+                                                    <div class="position-relative">
+                                                        <div class="progress free-bar">
+                                                            <div class="progress-bar bg-blue" role="progressbar"
+                                                                style="width: 50%" aria-valuenow="100" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                            <div class="progress-value"><span>50%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <th class="text-secondary" scope="row">Ravi Shankar</th>
+                                                <td>01-06-2022</td>
+                                                <td>
+                                                    <div class="position-relative">
+                                                        <div class="progress free-bar">
+                                                            <div class="progress-bar bg-blue" role="progressbar"
+                                                                style="width: 50%" aria-valuenow="100" aria-valuemin="0"
+                                                                aria-valuemax="100"></div>
+                                                            <div class="progress-value"><span>50%</span></div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <nav aria-label="Page navigation" id="navPage">
+                    <ul class="pagination justify-content-center custom-pagination">
+                        <li class="page-pagi disabled">
+                            <a class="pagi-link text-secondary" href="#" tabindex="-1" aria-disabled="true"
+                                aria-label="Précédent">Previous page</a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-pagi">
+                            <a class="pagi-link text-black" href="#" aria-label="Suivant">Next page</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
+    <script src="chart.js"></script>
+    <script src="chart2.js"></script>
+    <script type="text/javascript" src="dashboard.js"></script>
+    <script type="module" src="signOut.js"></script>
+</body>
+</html>

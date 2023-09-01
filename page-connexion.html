@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Se connecter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="page-connexion.css" />
+  </head>
+  <body
+    onload="noBack();"
+    onpageshow="if (event.persisted) noBack();"
+    onunload=""
+  >
+    <!-- connexion -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 contenu giss">
+          <div class="picture">
+            <img src="images/Group 1597.png" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="pt-5 text-center">
+            <div class="titre">
+              <h1>Bienvenue sur Bakeli - Tontine</h1>
+              <img src="images/Group 33778.png" class="img-fluid" alt="" />
+              <h2>Connectez-vous!</h2>
+              <p>Connectez-vous et gérez vos cotisations.</p>
+            </div>
+            <div class="form d-flex justify-content-center">
+              <div class="col-md-6">
+                <div class="my-4">
+                  <input
+                    type="email"
+                    class="form-control text-white bg"
+                    id="email"
+                    placeholder="E-mail"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    class="form-control text-white bg"
+                    id="password"
+                    placeholder="Mot de passe"
+                    required
+                  />
+                </div>
+                <!-- Mot de passe oublie -->
+                <div class="text-end mb-3">
+                  <a
+                    href="page-reset.html"
+                    class="titre text-decoration-none fw-bolder"
+                    >Mot de passe oublié ?</a
+                  >
+                </div>
+                <!-- </div> -->
+                <div class="centre d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    class="btn para text-center"
+                    id="connexion"
+                  >
+                    Connexion
+                  </button>
+                </div>
+
+                <!-- inscription -->
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center pt-4">
+            <p>Vous n'avez pas de compte ?</p>
+            <a
+              class="titre text-decoration-none fw-bolder ps-2"
+              href="page-inscription.html"
+              >Inscrivez-vous!</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-img">
+        <img src="images/Vectors.png" class="img-fluid w-100" alt="" />
+      </div>
+    </footer>
+    <!-- Script -->
+    <script type="module" src="page-connexion.js"></script>
+    <script type="text/javascript">
+      window.history.forward();
+      function noBack() {
+        window.history.forward();
+      }
+    </script>
+  </body>
+</html>
