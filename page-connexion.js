@@ -38,6 +38,7 @@ connexionButton.addEventListener("click", () => {
   signInWithEmailAndPassword(auth, email, password)
     .then(() => {
       alert("User logged in successfully");
+      // Vérifie l'état de l'authentification
       auth.onAuthStateChanged((user) => {
         if (user && email === adminEmail) {
           window.location.href = "dashboard.html";
@@ -50,12 +51,3 @@ connexionButton.addEventListener("click", () => {
       console.log("Login error:", error.message);
     });
 });
-
-// Vérifie l'état de l'authentification à chaque chargement de page
-// auth.onAuthStateChanged((user) => {
-//   if (user) {
-//     window.location.href = "dashboard.html";
-//   } else {
-//     window.location.href = "page-connexion.html";
-//   }
-// });

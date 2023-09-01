@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
+  font-size: medium;
 }
 
 .phase {
@@ -20,7 +21,7 @@
   width: 100%;
   background: #20df7f !important;
   border: none !important;
-  margin-top: 50px;
+  margin-top: 40px !important;
   animation: SlideUp 3s;
 }
 
